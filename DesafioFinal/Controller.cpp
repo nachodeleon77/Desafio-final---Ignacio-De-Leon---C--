@@ -3,6 +3,8 @@
 Controller::Controller() {
 	tienda = new Tienda("<Nombre de la tienda>", "<Direccion de la tienda>");
 	vendedor = new Vendedor("<Nombre>", "<Apellido>", "<Codigo del Vendedor>");
+	loadOptionsFromFile();
+	loadHistorialFromFile();
 }
 
 Controller::~Controller() {
@@ -105,4 +107,51 @@ int Controller::getTiendaStockDescuentoCamisas(tipomanga manga, tipocuello cuell
 }
 int Controller::getTiendaStockDescuentoPantalones(tipo tipopantalon, tipocalidad calidad) {
 	return tienda->getDescuentoPantalones(tipopantalon,calidad);
+}
+
+void Controller::saveCotizacionOnFile(Cotizacion c) {
+	ofstream MyFile;
+	MyFile.open("historial.txt", std::ios::app);
+	MyFile << c.getNumeroIdentificacion() << "ƒ";
+	MyFile << c.getFechaCotizacionRaw() << "ƒ";
+	MyFile << c.getCodigoVendedor() << "ƒ";
+	MyFile << c.getPrenda() << "ƒ";
+	MyFile << c.getPrecio() << "ƒ";
+	MyFile << c.getCantidad() << "ƒ";
+	MyFile << c.getDescuento() << "ƒ";
+	MyFile << c.getResultado() << "\n";
+	MyFile.close();
+}
+
+void Controller::loadHistorialFromFile() {
+	string myText;
+	ifstream MyReadFile("historial.txt");
+	Cotizacion c(0);
+	vector<std::string> val;
+	while (getline(MyReadFile, myText)) {
+		val = explode(myText, 'ƒ');
+		c.setNumeroIdentificacion(stoi(val[0]));
+		c.setFechaCotizacion((time_t)std::stoi(val[1]));
+		c.setCodigoVendedor(val[2]);
+		c.setPrenda(val[3]);
+		c.setPrecio(stod(val[4]));
+		c.setCantidad(stoi(val[5]));
+		c.setDescuento(stoi(val[6]));
+		c.setResultado(stod(val[7]));
+		vendedor->addHistorialCotizaciones(c);
+	}
+	MyReadFile.close();
+}
+
+std::vector<std::string> explode(std::string const& s, char delim)
+{
+	std::vector<std::string> result;
+	std::istringstream iss(s);
+
+	for (std::string token; std::getline(iss, token, delim); )
+	{
+		result.push_back(std::move(token));
+	}
+
+	return result;
 }

@@ -8,7 +8,6 @@ using namespace std;
 
 View::View() {
 	controller = new Controller();
-	controller->loadOptionsFromFile();
 	mostrarMenu();
 }
 
@@ -386,7 +385,7 @@ void View::crearCotizacion() {
 	}
 	Cotizacion c(0);
 	c.setNumeroIdentificacion(controller->getProximoNumeroIdentificadorCotizacion());
-	c.setFechaCotizacion();
+	c.setFechaCotizacion(time(0));
 	c.setCodigoVendedor(controller->getVendedorCodigo());
 	c.setPrecio(precio);
 	c.setPrenda(nombreprenda);
@@ -394,6 +393,7 @@ void View::crearCotizacion() {
 	c.setDescuento(descuento);
 	c.setResultado((precio * cantidadCotizar) * (100-descuento)/100);
 	controller->addVendedorHistorialCotizaciones(c);
+	controller->saveCotizacionOnFile(c);
 	imprimirCotizacionFinal(c);
 }
 

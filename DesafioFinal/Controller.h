@@ -3,6 +3,11 @@
 #include "Vendedor.h"
 #include <fstream>
 
+#include <string>
+#include <vector>
+#include <sstream>
+#include <utility>
+
 class Controller
 {
 private:
@@ -30,6 +35,8 @@ public:
 	int getProximoNumeroIdentificadorCotizacion();
 	void saveOptions();
 	void loadOptionsFromFile();
-
+	void saveCotizacionOnFile(Cotizacion c);
+	void loadHistorialFromFile();
 };
 
+std::vector<std::string> explode(std::string const& s, char delim);

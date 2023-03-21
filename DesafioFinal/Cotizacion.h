@@ -25,7 +25,7 @@ public:
 	Cotizacion(int setNumeroIdentificacion);
 	~Cotizacion();
 	void setNumeroIdentificacion(int NumeroIdentificacion);
-	void setFechaCotizacion();
+	void setFechaCotizacion(time_t fecha);
 	void setCodigoVendedor(string CodigoVendedor);
 	void setPrenda(string prenda);
 	void setCantidad(int Cantidad);
@@ -41,6 +41,7 @@ public:
 	void imprimir();
 	void setDescuento(int Descuento);
 	int getDescuento();
+	time_t getFechaCotizacionRaw();
 };
 
 #endif

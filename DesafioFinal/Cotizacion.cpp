@@ -17,17 +17,19 @@ int Cotizacion::getNumeroIdentificacion() {
 	return this->NumeroIdentificacion;
 }
 
-void Cotizacion::setFechaCotizacion() {
-	this->FechaCotizacion = time(0);
+void Cotizacion::setFechaCotizacion(time_t fecha) {
+	this->FechaCotizacion = fecha;
 }
 
 string Cotizacion::getFechaCotizacion() {
-	//return ctime(&this->FechaCotizacion);
     char buffer[80];
-    std::time_t now = std::time(nullptr);
-    std::strftime(buffer, 80, "%d/%m/%Y %H:%M:%S", localtime(&now));
+    std::strftime(buffer, 80, "%d/%m/%Y %H:%M:%S", localtime(&this->FechaCotizacion));
     std::string result(buffer);
 	return result;
+}
+
+time_t Cotizacion::getFechaCotizacionRaw() {
+	return this->FechaCotizacion;
 }
 
 void Cotizacion::setCodigoVendedor(string CodigoVendedor) {
