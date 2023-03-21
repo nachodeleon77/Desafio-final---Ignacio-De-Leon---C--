@@ -5,3 +5,21 @@
 10005ƒ1679377761ƒ123ƒCamisa Manga Larga (Cuello Mao) - Premiumƒ1ƒ21ƒ-33ƒ27.93
 10006ƒ1679377768ƒ123ƒCamisa Manga Larga (Cuello Mao) - Standardƒ21ƒ21ƒ-3ƒ454.23
 10007ƒ1679377965ƒ123ƒPantalon Comun - Premiumƒ121ƒ21ƒ0ƒ2541
+10008ƒ1679427493ƒ123ƒPantalon Chupin - Premiumƒ0ƒ0ƒ-18ƒ0
+10009ƒ1679428777ƒ123ƒPantalon Chupin - Premiumƒ2ƒ21ƒ-18ƒ49.56
+10010ƒ1679429243ƒ123ƒPantalon Chupin - Premiumƒ0ƒ0ƒ-18ƒ0
+10011ƒ1679429451ƒ123ƒPantalon Chupin - Premiumƒ0ƒ0ƒ-18ƒ0
+10012ƒ1679429691ƒ123ƒPantalon Chupin - Premiumƒ23ƒ21ƒ-18ƒ569.94
+10013ƒ1679429698ƒ123ƒPantalon Chupin - Premiumƒ23ƒ32ƒ-18ƒ868.48
+10014ƒ1679429713ƒ123ƒPantalon Chupin - Premiumƒ23ƒ21ƒ-18ƒ569.94
+10015ƒ1679429832ƒ123ƒPantalon Chupin - Premiumƒ2ƒ221ƒ-18ƒ521.56
+10016ƒ1679430149ƒ123ƒPantalon Comun - Premiumƒ0ƒ0ƒ0ƒ0
+10017ƒ1679430361ƒ123ƒPantalon Chupin - Premiumƒ2ƒ2ƒ-18ƒ4.72
+10018ƒ1679430542ƒ123ƒPantalon Chupin - Premiumƒ-1ƒ0ƒ-18ƒ-0
+10019ƒ1679431060ƒ123ƒPantalon Chupin - Premiumƒ21ƒ0ƒ-18ƒ0
+10020ƒ1679431231ƒ123ƒPantalon Chupin - Premiumƒ32ƒ0ƒ-18ƒ0
+10021ƒ1679431289ƒ123ƒPantalon Chupin - Premiumƒ32ƒ32ƒ-18ƒ1208.32
+10022ƒ1679431304ƒ123ƒPantalon Chupin - Premiumƒ32.6ƒ32ƒ-18ƒ1230.98
+10023ƒ1679431397ƒ123ƒPantalon Chupin - Premiumƒ32ƒ0ƒ-18ƒ0
+10024ƒ1679431415ƒ123ƒPantalon Chupin - Premiumƒ32ƒ2ƒ-18ƒ75.52
+10025ƒ1679431626ƒ123ƒPantalon Chupin - Premiumƒ21ƒ32ƒ-18ƒ792.96

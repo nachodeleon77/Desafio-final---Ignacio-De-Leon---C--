@@ -192,11 +192,11 @@ void View::calidadPrenda() {
 	switch (ch) {
 	case '1':
 		tipoCalidad = 1;
-		precioUnitario();
+		precioUnitario(0);
 		break;
 	case '2':
 		tipoCalidad = 2;
-		precioUnitario();
+		precioUnitario(0);
 		break;
 	case esc:
 		if (tipoPrenda == 1) {
@@ -210,17 +210,33 @@ void View::calidadPrenda() {
 	}
 }
 
-void View::precioUnitario() {
+void View::precioUnitario(int error) {
 	system("CLS");
 	cout << "COTIZADOR EXPRESS - COTIZAR\n";
 	cout << "--------------------------------------------------------\n";
-	cout << "Paso 4 - Ingrese el precio unitario de la prenda \n";
+	cout << "Paso 4 - Ingrese el precio unitario de la prenda. \n";
+	cout << "(Los decimales deben ser separados por el caracter punto (.)) \n";
 	cout << "--------------------------------------------------------\n";
+	if (error == 1) {
+		cout << "Ingrese un precio valido > 0 \n";
+		cout << "--------------------------------------------------------\n";
+	}
 	cout << "\n";
 	cout << "PRECIO UNITARIO: ";
+
 	cin >> precio;
-	cantidad(0);
+	if (precio == 0) {
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		precioUnitario(1);
+	}
+	else {
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cantidad(0);
+	}
 }
+
 
 void View::cantidad(int error) {
 	tipomanga e_tipomanga; // { Corta, Larga };
@@ -275,14 +291,30 @@ void View::cantidad(int error) {
 		cout << "LA CANTIDAD SELECCIONADA EXCEDE EL STOCK DISPONIBLE \n";
 		cout << "--------------------------------------------------------\n";
 	}
+	if (error == 2) {
+		cout << "INGRESE UNA CANTIDAD VALIDA > 0 \n";
+		cout << "--------------------------------------------------------\n";
+	}
 	cout << "\n";
 	cout << "CANTIDAD a COTIZAR: ";
 	cin >> cantidadCotizar;
-	if (cantidadCotizar <= stock) {
-		crearCotizacion();
-	} else {
-		cantidad(1);
-	}	
+
+	if (cantidadCotizar == 0) {
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cantidad(2);
+	}
+	else {
+		if (cantidadCotizar > stock) {
+			cantidad(1);
+		}
+		else {
+			crearCotizacion();
+		}
+	}
+
+
+	
 }
 
 void View::imprimirCotizacionFinal(Cotizacion cotizacion) {

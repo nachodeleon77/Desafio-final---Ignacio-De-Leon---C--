@@ -1,5 +1,9 @@
 #pragma once
 #include "Controller.h";
+#include <stdlib.h>
+#include <stdio.h>
+#include <iostream>
+#include <conio.h>
 
 class View
 {
@@ -9,7 +13,7 @@ private:
 	void camisaCuello();
 	void pantalonTipo();
 	void calidadPrenda();
-	void precioUnitario();
+	void precioUnitario(int error);
 	void cantidad(int error);
 	void crearCotizacion();
 	void imprimirCotizacionFinal(Cotizacion c);

@@ -1,4 +1,5 @@
-﻿  Controller.cpp
-  Cotizacion.cpp
-  Generating Code...
+﻿  View.cpp
+C:\Users\Nacho.LAPTOP-U76R50BB\source\repos\Desafio-final---Ignacio-De-Leon---C--\DesafioFinal\View.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Nacho.LAPTOP-U76R50BB\source\repos\Desafio-final---Ignacio-De-Leon---C--\DesafioFinal\View.cpp(246,13): warning C4101: 'e_tipoprenda': unreferenced local variable
+C:\Users\Nacho.LAPTOP-U76R50BB\source\repos\Desafio-final---Ignacio-De-Leon---C--\DesafioFinal\View.cpp(435,6): warning C4091: '': ignored on left of 'int' when no variable is declared
   DesafioFinal.vcxproj -> C:\Users\Nacho.LAPTOP-U76R50BB\source\repos\Desafio-final---Ignacio-De-Leon---C--\x64\Debug\DesafioFinal.exe
