@@ -5,7 +5,6 @@
 class Camisas : public Prenda
 {
 private:
-
 	tipomanga manga;
 	tipocuello cuello;
 public:
