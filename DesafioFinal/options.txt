@@ -1,5 +1,0 @@
-Tienda
-Direccion
-Vendedor
-Apellido
-123
